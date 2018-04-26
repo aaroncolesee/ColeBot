@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
       .setColor('GREEN');
 
     if(japanese_word != undefined) field1 += japanese_word;
-    if(field1 != '' ) field1 += '[' + reading + ']';
+    if(field1 != '' ) field1 += ' [' + reading + ']';
     else field1 += reading;
 
     embed = embed.setDescription(field1)
