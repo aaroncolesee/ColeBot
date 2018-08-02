@@ -1,5 +1,4 @@
 const botsettings = require("./botsettings.json");
-const config = require("./config.json");
 const Discord = require("discord.js");
 const fs = require("fs");
 
@@ -41,4 +40,8 @@ bot.on("message", async message =>{
 
 })
 
-bot.login(config.token);
+if(process.env.BOT_TOKEN != undefined) bot.login(process.env.BOT_TOKEN);
+else{
+  const config = require("./config.json");
+  bot.login(config.token);
+}
