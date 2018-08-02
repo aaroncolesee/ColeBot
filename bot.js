@@ -1,3 +1,4 @@
+const express = require('express');
 const botsettings = require("./botsettings.json");
 const Discord = require("discord.js");
 const fs = require("fs");
@@ -45,3 +46,5 @@ else{
   const config = require("./config.json");
   bot.login(config.token);
 }
+
+express().listen(process.env.PORT || 5000);
