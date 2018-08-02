@@ -2,11 +2,6 @@ const botsettings = require("./botsettings.json");
 const Discord = require("discord.js");
 const fs = require("fs");
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
-
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 
