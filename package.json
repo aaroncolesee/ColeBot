@@ -2,11 +2,11 @@
   "name": "colebot",
   "version": "0.0.1",
   "description": "my own discord bot",
-  "main": "bot.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Friscth",
+  "author": "Verniy",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.3.2"
