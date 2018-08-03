@@ -54,7 +54,7 @@ var http = require('http'); //importing http
 function startKeepAlive() {
     setInterval(function() {
         var options = {
-            host: 'discor-bot.herokuapp.com',
+            host: 'discord-bot.herokuapp.com',
             port: 80,
             path: '/'
         };
