@@ -20,6 +20,8 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "unsubscribe"
+    name: "unsubscribe",
+    description: "Unsubscribes from a feed",
+    usage: ".unsubscribe [channel name]"
 }
   

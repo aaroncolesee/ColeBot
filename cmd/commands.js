@@ -7,10 +7,11 @@ module.exports.run = async (bot, message, args) => {
   fs.readdir("./cmd", (err, files) => {
     if(err) console.error(err);
 
-    let jsfiles = files.filter(f => f.split(".").pop() === "js");
+    files.forEach((f, i) => {
+      let props = require(`./${f}`);
+      name = props.help.name;
 
-    jsfiles.forEach((f, i) => {
-    message.channel.send(`${f}`.substr(0, f.length-3));
+      message.channel.send(`${name}`);
     });
   });
 
@@ -18,5 +19,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "commands"
+  name: "commands",
+  description: "Lists all of the possible commands",
+  usage: ".commands"
 }

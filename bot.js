@@ -41,10 +41,10 @@ bot.on("message", async message =>{
 
 })
 
-if(process.env.BOT_TOKEN != undefined) bot.login(process.env.BOT_TOKEN);
-else{
-  const config = require("./config.json");
+if(process.env.TOKEN == undefined ){
   bot.login(config.token);
+  const config = require("./config.json");
 }
+bot.login(process.env.TOKEN);
 
 express().listen(process.env.PORT || 5000);

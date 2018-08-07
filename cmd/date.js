@@ -13,5 +13,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "date"
+  name: "date",
+  description: "Displays the current date",
+  usage: ".date"
 }

@@ -74,5 +74,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "jisho"
+  name: "jisho",
+  description: "Searches Jisho for the meaning of a word",
+  usage: ".jisho [word]"
 }
